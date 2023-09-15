@@ -1,0 +1,41 @@
+﻿@model SpeedboxTestApi.Models.Order
+
+<form asp-action="Index" asp-controller="SDEC" method="post">
+    <div>
+        <label asp-for="Weight"></label><br />
+        <input asp-for="Weight" />
+        <span asp-validation-for="Weight"></span>
+    </div>
+    <div>
+        <label asp-for="Length"></label><br />
+        <input asp-for="Length" />
+        <span asp-validation-for="Length"></span>
+    </div>
+    <div>
+        <label asp-for="Width"></label><br />
+        <input asp-for="Width" />
+        <span asp-validation-for="Width"></span>
+    </div>
+    <div>
+        <label asp-for="Height"></label><br />
+        <input asp-for="Height" />
+        <span asp-validation-for="Height"></span>
+    </div>
+    <div>
+        <label asp-for="FiasDepartureCity"></label><br />
+        <input asp-for="FiasDepartureCity" />
+        <span asp-validation-for="FiasDepartureCity"></span>
+    </div>
+    <div>
+        <label asp-for="FiasReceivingCity"></label><br />
+        <input asp-for="FiasReceivingCity" />
+        <span asp-validation-for="FiasReceivingCity"></span>
+    </div>
+    <div>
+        <input type="submit" value="Рассчитать стоимость" />
+    </div>
+</form>
+
+<p>Иготовая стоимость: @ViewData["totalSum"]</p>
+
+
